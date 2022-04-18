@@ -1,0 +1,1 @@
+#include <chess/pieces/queen.hh>

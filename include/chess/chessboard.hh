@@ -5,7 +5,12 @@
 #include <vector>
 using namespace std;
 
-#include "pieces/all_pieces"
+#include <chess/pieces/bishop.hh>
+#include <chess/pieces/king.hh>
+#include <chess/pieces/knight.hh>
+#include <chess/pieces/pawn.hh>
+#include <chess/pieces/queen.hh>
+#include <chess/pieces/rook.hh>
 
 class ChessBoard {
 public:

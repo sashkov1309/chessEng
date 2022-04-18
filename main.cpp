@@ -1,5 +1,5 @@
 #include <memory>
-#include "chess/chessboard.cpp"
+#include <chess/chessboard.hh>
 
 using namespace std;
 

@@ -1,4 +1,4 @@
-#include "piece.cpp"
+#include <chess/pieces/piece.hh>
 
 class Rook : public ChessPiece {
 public:

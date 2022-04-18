@@ -3,22 +3,18 @@ project(chessEngine)
 
 set(CMAKE_CXX_STANDARD 17)
 
+include_directories(include)
+
 add_library(${PROJECT_NAME} SHARED
-        chess/chessboard.cpp
-        chess/pieces/piece.cpp
-        chess/pieces/rook.cpp
-        chess/pieces/king.cpp
-        chess/pieces/pawn.cpp
-        chess/pieces/bishop.cpp
-        chess/pieces/queen.cpp
-        chess/pieces/knight.cpp
-        chess/chessboard.cpp
+        src/chessboard.cc
+        src/pieces/piece.cc
+        src/pieces/rook.cc
+        src/pieces/king.cc
+        src/pieces/pawn.cc
+        src/pieces/bishop.cc
+        src/pieces/queen.cc
+        src/pieces/knight.cc
         )
 
-include_directories(chess)
-
-add_executable(chessMain
-        main.cpp
-        )
-
+add_executable(chessMain main.cpp)
 target_link_libraries(chessMain ${PROJECT_NAME})
