@@ -29,6 +29,11 @@ public:
     bool isOnBoard(Position to) {
         return to.x >= 0 && to.x < getRows() && to.y >= 0 && to.y < getCols();
     }
+
+    bool Move(Position from,  Position to) {
+        return Move(Piece(from), to);
+    }
+
     bool Move(ChessPiecePtr piece, Position to) {
         if (isOnBoard(to) && piece->CanMove(to, board)) {
             if (board[to.x][to.y]) {

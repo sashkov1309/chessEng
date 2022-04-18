@@ -50,16 +50,18 @@ int main() {
     for(int i = 0; i < 8; i++) {
         board.AddPiece(std::make_shared <Pawn>(Position(6, i), true, true));
     }
-    board.AddPiece(std::make_shared <Rook>(Position(7, 0), false));
-    board.AddPiece(std::make_shared <Rook>(Position(7, 7), false));
-    board.AddPiece(std::make_shared <Bishop>(Position(7, 2), false));
-    board.AddPiece(std::make_shared <Bishop>(Position(7, 5), false));
-    board.AddPiece(std::make_shared <Knight>(Position(7, 1), false));
-    board.AddPiece(std::make_shared <Knight>(Position(7, 6), false));
-    board.AddPiece(std::make_shared <King>(Position(7, 4), false));
-    board.AddPiece(std::make_shared <Queen>(Position(7, 3), false));
+    board.AddPiece(std::make_shared <Rook>(Position(7, 0), true));
+    board.AddPiece(std::make_shared <Rook>(Position(7, 7), true));
+    board.AddPiece(std::make_shared <Bishop>(Position(7, 2), true));
+    board.AddPiece(std::make_shared <Bishop>(Position(7, 5), true));
+    board.AddPiece(std::make_shared <Knight>(Position(7, 1), true));
+    board.AddPiece(std::make_shared <Knight>(Position(7, 6), true));
+    board.AddPiece(std::make_shared <King>(Position(7, 4), true));
+    board.AddPiece(std::make_shared <Queen>(Position(7, 3), true));
     board.Draw();
 
+    board.Move(Position(6, 4), Position(4, 4));
+    board.Draw();
     return 0;
 }
 

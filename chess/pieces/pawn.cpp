@@ -7,8 +7,8 @@ public:
         return PAWN;
     }
     bool CanMove(Position to,  Board &board) override {
-        int p_x = abs(to.x - position.x);
-        int p_y = abs(to.y - position.y);
+        int p_y = abs(to.x - position.x);
+        int p_x = abs(to.y - position.y);
         if (isFirstMove) {
             if ((p_y == 2 || p_y == 1) && (p_x == 0)) {
                 return true;
