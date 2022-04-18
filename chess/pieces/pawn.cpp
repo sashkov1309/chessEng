@@ -6,7 +6,8 @@ public:
     PieceType Type() override {
         return PAWN;
     }
-    bool CanMove(Position to,  Board &board) override {
+    bool CanMove(Position to,  Board &board) override {\
+        // TODO: fix this later
         int p_y = abs(to.x - position.x);
         int p_x = abs(to.y - position.y);
         if (isFirstMove) {
