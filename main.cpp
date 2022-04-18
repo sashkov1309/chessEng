@@ -62,6 +62,26 @@ int main() {
 
     board.Move(Position(6, 4), Position(4, 4));
     board.Draw();
+
+    board.Move(Position(1, 4), Position(3, 4));
+    board.Draw();
+
+    board.Move(Position(7, 3), Position(3, 7));
+    board.Draw();
+
+    board.Move(Position(0, 1), Position(2, 2));
+    board.Draw();
+
+    // bishop moving
+    board.Move(Position(7, 5), Position(4, 2));
+    board.Draw();
+
+    board.Move(Position(0, 6), Position(2, 5));
+    board.Draw();
+
+    board.Move(Position(3, 7), Position(1, 5));
+    board.Draw();
+
     return 0;
 }
 
