@@ -5,6 +5,9 @@
 #include <vector>
 using namespace std;
 
+#ifndef CHESS_PIECE
+#define CHESS_PIECE
+
 class ChessPiece;
 using ChessPiecePtr = shared_ptr<ChessPiece>;
 using Board = vector<vector<ChessPiecePtr>>;
@@ -65,3 +68,4 @@ protected:
     Position position;
 };
 
+#endif

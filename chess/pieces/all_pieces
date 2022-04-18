@@ -1,0 +1,6 @@
+#include "bishop.cpp"
+#include "king.cpp"
+#include "knight.cpp"
+#include "pawn.cpp"
+#include "queen.cpp"
+#include "rook.cpp"

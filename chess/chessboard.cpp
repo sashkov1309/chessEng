@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-#include "pieces/piece.cpp"
+#include "pieces/all_pieces"
 
 class ChessBoard {
 public:
@@ -84,7 +84,7 @@ public:
                 for (int y = 0; y < getCols(); y++) {
                     if (board[x][y]) {
                         if (board[x][y]->Type() != ChessPiece::KING && board[x][y]->White() != board[kingPos.x][kingPos.y]->White()) { // != white as parameter
-                            if (board[x][y]->CanMove(kingPos, this) && IsNothingBetween(Position(x, y), kingPos)) {
+                            if (board[x][y]->CanMove(kingPos, board) && IsNothingBetween(Position(x, y), kingPos)) {
                                 cout << "\nCheck by ";
                                 cout << (board[x][y]->White() ? "white " : "black ");
                                 cout << ChessPiece::ToStr(board[x][y]->Type()) << ".\n";
